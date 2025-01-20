@@ -1,0 +1,114 @@
+  // Array Methods
+  // - `map()`: Transforms each element and 
+  // returns a new array.
+  
+  let personJohn = {
+    name: "John",
+    age: 33,
+    greet: () => console.log(`Hi I am ${personJohn.name}`)
+}
+  
+  personAlice.greet();
+  personJohn.greet();
+  
+  // Counter
+  let counter = {
+    value: 0,
+    increment: function(){
+      this.value += 1;
+      return this.value;
+    },
+    incrementBy: function(num){
+      this.value += num;
+      return this.value;
+    }
+  }
+    
+  console.log(counter.increment());
+  console.log(counter.increment());
+  console.log(counter.increment());
+  console.log(counter.increment());
+  console.log(counter.incrementBy(10));
+
+  
+  function double(num) {
+    return num * 2;
+  }
+
+  let numbers = [1, 2, 3, 4, 5];
+   
+  let doubleNumbers = numbers.map(double);
+  console.log(doubleNumbers);
+
+  
+  // Using Anonymous Function
+  let doubleAnonymous = numbers.map(function(num) {
+    return num * 2;
+  });
+  console.log(doubleAnonymous);
+  
+ 
+  // Using Arrow Function
+  let doubleArrow = numbers.map(num => num * 10);
+  console.log(doubleArrow);
+  
+
+  // - `filter()`: Returns a new array with elements  that pass a condition.         
+  const evenNumbers = numbers.filter(num => num % 2 === 0);
+  console.log(evenNumbers);
+  
+  // - `reduce()`: Reduces the array to a single value.
+  let sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue);
+  console.log(sum);
+
+  // - `forEach()`: Executes a function for each array element.
+  numbers.forEach(num => console.log(num));
+
+  // - `find()`: Returns the first element that satisfies a condition.
+  let firstEven = numbers.find(num => num % 2 === 0);
+  console.log(firstEven);
+  
+  
+  // - `some()`: Checks if at least one element passes a test.
+  let hasNegative = [-1, 2, 3, 4].some(num => num < 0);
+  console.log(hasNegative);
+  
+  // - `every()`: Checks if all elements pass a test.
+  let hasEvery = [-1, -2, -3, -4].every(num => num < 0);
+  console.log(hasEvery);
+
+
+  // - `concat()`: Merges arrays into a new array.
+  let moreNumbers = [6, 7, 8, 9];
+  let newArray = numbers.concat(moreNumbers);
+  console.log(newArray);
+
+
+  // - `slice()`: Returns a portion of an array.
+  let slicedNum = numbers.slice(1, 3);
+  console.log(slicedNum);
+
+
+  // - `splice()`: Modifies the array by removing/replacing elements.
+  let fruits = ["Apple", "Banana", "Orange"];
+  fruits.splice(1,1,"Mango");
+  console.log(fruits);
+
+
+  // - `join()`: Joins all elements into a string.
+  let allFruits = fruits.join(", ");
+  console.log(allFruits);
+
+
+  // - `reverse()`: Reverses the order of the elements.
+  let reverseNumber = numbers.reverse();
+  console.log(reverseNumber);
+
+  
+  // - `sort()`: Sorts the elements of an array.
+  numbers = [3, 1, 10, 2]
+  let sortedNum = numbers.sort((a, b) => a - b);
+  console.log(sortedNum);
+
+
+
